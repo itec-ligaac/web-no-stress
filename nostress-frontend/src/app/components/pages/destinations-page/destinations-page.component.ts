@@ -28,6 +28,9 @@ export class DestinationsPageComponent implements OnInit {
 
   public async ngOnInit() {
     this.destinations = await this.destinationsService.get();
+    for (const destination of this.destinations) {
+      destination.picture = '/assets/images/egipt.png';
+    }
     this.initialDestinations = this.destinations;
     this.destinationCopy = this.destinations;
     this.setCriteria();
