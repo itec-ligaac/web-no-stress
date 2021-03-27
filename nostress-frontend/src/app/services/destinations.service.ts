@@ -10,7 +10,7 @@ export class DestinationsService {
   constructor(private http: HttpClient) {
   }
 
-  public getJSON(): Promise<any> {
+  public get(): Promise<any> {
     return this.http.get('/api/destinations').toPromise();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {_destinations} from '../../../mock-destinations';
+import {DestinationsService} from '../../../services/destinations.service';
+import {DestinationModel} from '../../../models/destination-model';
 
 
 @Component({
@@ -8,13 +9,16 @@ import {_destinations} from '../../../mock-destinations';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  destinations: DestinationModel[] = [];
 
-  constructor() { }
-  dest = _destinations;
+  constructor(private destinationsService: DestinationsService) { }
 
 
-  ngOnInit(): void {
-
+  public async ngOnInit() {
+    this.destinations = await this.destinationsService.get();
+    for (const destination of this.destinations) {
+      destination.picture = '/assets/images/egipt.png';
+    }
   }
 
 }
