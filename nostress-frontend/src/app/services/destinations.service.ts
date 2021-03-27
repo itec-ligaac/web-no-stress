@@ -11,6 +11,6 @@ export class DestinationsService {
   }
 
   public getJSON(): Promise<any> {
-    return this.http.get('./assets/destinations.json').toPromise();
+    return this.http.get('/api/destinations').toPromise();
   }
 }
