@@ -11,6 +11,9 @@ $blue:#4287f5;
   box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.16);
   width: 100%;
   margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  height: 150px;
 }
 
 :host>div{
@@ -58,7 +61,7 @@ a:hover{
   padding-left: 10px;
   padding-right: 10px;
   cursor:pointer;
-  position: fixed;
+  position: absolute;
 }
 
 .up>span:hover{
