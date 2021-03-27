@@ -36,3 +36,7 @@ app.get('/api/destinations', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/nostress-frontend/dist/nostress-frontend/index.html");
 })
+
+app.use((req, res, next) => {
+    res.status(404).send("Sorry can't find that!");
+})
