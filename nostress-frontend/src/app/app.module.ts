@@ -7,6 +7,8 @@ import { MenuComponent } from './components/shared/menu/menu.component';
 import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
 import { DestinationsPageComponent } from './components/pages/destinations-page/destinations-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
