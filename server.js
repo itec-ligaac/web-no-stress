@@ -23,12 +23,12 @@ app.listen(3080);
 
 app.use(morgan('dev'));
 
-app.use(express.static.apply(process.cwd() + "/web-no-stress/dist"));
+app.use(express.static.apply(process.cwd() + "/nostress-frontend/dist/nostress-frontend"));
 
 app.get('/api/destinations', (req, res) => {
     res.json(destinations);
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(process.cwd() + "/web-no-stress/dist/index.html");
+    res.sendFile(process.cwd() + "/nostress-frontend/dist/nostress-frontend/index.html");
 })
