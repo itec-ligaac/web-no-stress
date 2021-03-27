@@ -15,7 +15,8 @@ import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privac
     AppComponent,
     MenuComponent,
     LandingPageComponent,
-    DestinationsPageComponent
+    DestinationsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
