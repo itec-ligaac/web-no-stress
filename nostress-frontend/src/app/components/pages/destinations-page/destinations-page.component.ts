@@ -14,6 +14,7 @@ export class DestinationsPageComponent implements OnInit {
 
   public criteria: any[] = [];
   initialDestinations: DestinationModel[] = [];
+
   destinations: DestinationModel[] = [
     {
       name: 'Dubai',
@@ -50,7 +51,7 @@ export class DestinationsPageComponent implements OnInit {
     }
   ];
 
-  public checked: Boolean[] = [];
+  public checked: boolean[] = [];
 
   public initChecked(): void {
     for (let i = 0; i < this.criteria.length; i++) {
@@ -65,11 +66,7 @@ export class DestinationsPageComponent implements OnInit {
   }
 
   public filterDestinations(criteria: any, index: number): void {
-    if (this.checked[index]) {
-      this.checked[index] = false;
-    } else {
-      this.checked[index] = true;
-    }
+
     const visibleDestinations: DestinationModel[] = [];
 
     for (const destination of this.destinations) {
@@ -86,7 +83,12 @@ export class DestinationsPageComponent implements OnInit {
       }
     }
 
-    this.destinations = visibleDestinations;
+    if (this.checked[index]) {
+      this.checked[index] = false;
+    } else {
+      this.checked[index] = true;
+      this.destinations = visibleDestinations;
+    }
   }
 
 
