@@ -26,7 +26,11 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + "/nostress-frontend/dist/nostress-frontend"));
 
 app.get('/api/destinations', (req, res) => {
-    res.json(destinations);
+    let responseJson = [{}];
+    for (let i = 0; i < 7; ++ i) {
+        responseJson[i] = destinations[Math.floor(Math.random() * 230)];
+    }
+    res.json(responseJson);
 })
 
 app.get('/', (req, res) => {
