@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Routes} from '@angular/router';
+import {LandingPageComponent} from '../../pages/landing-page/landing-page.component';
+import {DestinationsPageComponent} from '../../pages/destinations-page/destinations-page.component';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
