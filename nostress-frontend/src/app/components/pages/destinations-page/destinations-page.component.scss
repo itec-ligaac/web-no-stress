@@ -5,17 +5,16 @@
 }
 
 .destination-container {
-  display: flex;
-  align-items: center;
   margin: 10px auto;
   border-style: solid;
   border-radius: 10px;
   height: 160px;
+  display:flex;
 }
 
 .destination-picture {
   width:300px;
-  height:150px;
+  height:154px;
 }
 
 .destination-text {
@@ -38,9 +37,71 @@
   display: flex;
 }
 
-.hotel-container {
-  display: table;
-  margin-right: 10px;
+.destination-left-info{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+}
+.hotel-container>div{
+  display:inline-table;
+  padding:10px;
+}
+
+.reset{
+  background:#87cefa;
+  color:white;
+  cursor:pointer;
+  padding:5px;
+  border:2px solid #87cefa;
+  transition-timing-function: cubic-bezier(1,0,0,1);
+  transition-duration:.3s;
+}
+.reset:hover{
+  background:white;
+  color:black;
+}
+
+.destination-text{
+  padding:5px;
+  margin-bottom:-5px;
+}
+.hotel-container{
+  margin-top:-5px;
+}
+
+.hotel-container>div{
+  padding:2px !important;
+  margin:2px;
+}
+.hotel-container>div>a{
+  text-decoration:none;
+}
+
+.hotel-container>div:hover{
+  background:lightskyblue;
+  border-radius:10%;
+}
+
+.danger{
+  background:#eee;
+  width:10px;
+  height:100%;
+  bottom:0;
+  transform:rotate(180deg);
+}
+
+.danger-in{
+  width:10px;
+  background:tomato;
+}
+
+.danger-text{
+  background:tomato;
+  display:table;
+  margin:5px;
+  padding:3px;
+  color:white;
+  margin-bottom:-5px;
 }
 
 
