@@ -45,11 +45,18 @@ export class DestinationsPageComponent implements OnInit {
   constructor() {
   }
 
+  public initChecked():void{
+for(let i=0;i<this.criteria.length;i++) this.checked.push(false);
+}
+
   ngOnInit(): void {
-      this.setCriteria();
+    this.setCriteria();
+    this.initChecked();
   }
 
-  public filterDestinations(criteria: any): void {
+  public filterDestinations(criteria: any, index: number): void {
+    if(this.checked[index]) this.checked[index]=false;
+    else this.checked[index]=true;
     const visibleDestinations: DestinationModel[] = [];
 
     for (const destination of this.destinations) {
@@ -69,18 +76,28 @@ export class DestinationsPageComponent implements OnInit {
     this.destinations = visibleDestinations;
   }
 
+  public checked:Boolean[]=[];
+
+
   public setCriteria(): void {
     for (const destination of this.destinations) {
-        if (!this.criteria.includes(destination.country)) {
-            this.criteria.push(destination.country);
-        }
+      if (!this.criteria.includes(destination.country)) {
+        this.criteria.push(destination.country);
+      }
     }
+
+
     for (let i = 1; i <= 5; ++i) {
-        this.criteria.push(i);
+      this.criteria.push(i);
     }
     for (let i = 1000; i <= 10000; i += 1000) {
-        this.criteria.push(i);
+      this.criteria.push(i);
     }
+  }
+
+  public reset():void {
+   this.checked.length=0;
+   this.initChecked();
   }
 
 }
