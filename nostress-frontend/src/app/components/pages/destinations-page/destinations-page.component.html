@@ -1,1 +1,17 @@
-<p>destinations-page works!</p>
+<div class="container">
+  <h1 class="heading">Browse all the destinations available!</h1>
+  <div class="container criteria-container">
+      <div *ngFor="let crt of criteria" class="arrange">
+        <div class="container">
+          <input type="checkbox" (click)="filterDestinations(crt)">
+          <p>{{crt}}</p>
+        </div>
+      </div>
+  </div>
+  <div *ngFor="let destination of destinations">
+    <div class="destination-container">
+      {{destination.name}}
+      {{destination.country}}
+    </div>
+  </div>
+</div>
