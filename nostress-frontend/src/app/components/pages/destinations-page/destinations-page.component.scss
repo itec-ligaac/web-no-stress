@@ -32,10 +32,18 @@
 }
 
 .criteria-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   display: flex;
 }
 
 .hotel-container {
   display: table;
   margin-right: 10px;
+}
+
+
+.column {
+  flex: 50%;
 }

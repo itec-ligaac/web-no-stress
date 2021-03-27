@@ -1,5 +1,6 @@
 import {Component, OnInit, Pipe} from '@angular/core';
 import {DestinationModel} from '../../../models/destination-model';
+import {of} from 'rxjs';
 
 @Component({
   selector: 'app-destinations-page',
@@ -8,7 +9,11 @@ import {DestinationModel} from '../../../models/destination-model';
 })
 export class DestinationsPageComponent implements OnInit {
 
+  constructor() {
+  }
+
   public criteria: any[] = [];
+  initialDestinations: DestinationModel[] = [];
   destinations: DestinationModel[] = [
     {
       name: 'Dubai',
@@ -42,21 +47,26 @@ export class DestinationsPageComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  public checked: Boolean[] = [];
+
+  public initChecked(): void {
+    for (let i = 0; i < this.criteria.length; i++) {
+      this.checked.push(false);
+    }
   }
 
-  public initChecked():void{
-for(let i=0;i<this.criteria.length;i++) this.checked.push(false);
-}
-
   ngOnInit(): void {
+    this.initialDestinations = this.destinations;
     this.setCriteria();
     this.initChecked();
   }
 
   public filterDestinations(criteria: any, index: number): void {
-    if(this.checked[index]) this.checked[index]=false;
-    else this.checked[index]=true;
+    if (this.checked[index]) {
+      this.checked[index] = false;
+    } else {
+      this.checked[index] = true;
+    }
     const visibleDestinations: DestinationModel[] = [];
 
     for (const destination of this.destinations) {
@@ -76,8 +86,6 @@ for(let i=0;i<this.criteria.length;i++) this.checked.push(false);
     this.destinations = visibleDestinations;
   }
 
-  public checked:Boolean[]=[];
-
 
   public setCriteria(): void {
     for (const destination of this.destinations) {
@@ -95,9 +103,12 @@ for(let i=0;i<this.criteria.length;i++) this.checked.push(false);
     }
   }
 
-  public reset():void {
-   this.checked.length=0;
-   this.initChecked();
+  public reset(): void {
+    this.destinations = this.initialDestinations;
+    this.checked.length = 0;
+    this.initChecked();
   }
+
+  public isNumber(val: any): boolean { return typeof val === 'number'; }
 
 }

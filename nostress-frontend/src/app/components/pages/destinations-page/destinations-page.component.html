@@ -1,13 +1,16 @@
 <div class="container">
   <h1 class="heading">Browse all the destinations available!</h1>
   <div class="container criteria-container">
-    <div *ngFor="let crt of criteria;let i=index" class="arrange">
+    <div *ngFor="let crt of criteria;let i=index">
       <div class="container">
-        <input type="checkbox" [(ngModel)]="checked[i]" (click)="filterDestinations(crt, i)">
-        <p>{{crt}}</p>
+        <input type = "checkbox" [(ngModel)]="checked[i]" (click)="filterDestinations(crt, i)">
+        <p *ngIf="isNumber(crt) && crt > 5"> Price in range of: {{crt}}</p>
+        <p *ngIf="isNumber(crt) && crt <6"> Number of stars: {{crt}}</p>
+        <p *ngIf="!isNumber(crt)">Country {{crt}}</p>
       </div>
     </div>
   </div>
+  <button class="btn btn-dark" (click)="reset()">Reset filters</button>
   <div *ngFor="let destination of destinations">
     <div class="destination-container">
       <img class="destination-picture" src="{{ destination.picture }}"/>
@@ -18,11 +21,7 @@
           <a href = "{{hotel.website}}" target="_blank">{{hotel.name}}</a>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
-<span (click)="reset()">reset</span>
-
-{{ checked[1] }}
