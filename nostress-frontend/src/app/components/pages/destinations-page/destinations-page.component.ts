@@ -18,6 +18,7 @@ export class DestinationsPageComponent implements OnInit {
     {
       name: 'Dubai',
       country: 'Saudi Arabia',
+      danger: 50,
       hotels: [
         {name: 'Hotel1', price: 10000, stars: 5},
         {name: 'Hotel2', price: 15000, stars: 3},
@@ -28,6 +29,7 @@ export class DestinationsPageComponent implements OnInit {
     {
       name: 'Sk1',
       country: 'Austria',
+      danger: 10,
       hotels: [
         {name: 'Primul1', price: 5000, stars: 5},
         {name: 'Primul2', price: 3000, stars: 2},
@@ -38,6 +40,7 @@ export class DestinationsPageComponent implements OnInit {
     {
       name: 'Sk2',
       country: 'Austria',
+      danger: 90,
       hotels: [
         {name: 'Aldoilea1', price: 4500, stars: 5},
         {name: 'Aldoilea2', price: 2500, stars: 3},

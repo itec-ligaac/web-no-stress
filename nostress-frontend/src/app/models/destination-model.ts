@@ -5,4 +5,5 @@ export interface DestinationModel {
   country: string;
   hotels: HotelModel[];
   picture?: string;
+  danger?: number;
 }
