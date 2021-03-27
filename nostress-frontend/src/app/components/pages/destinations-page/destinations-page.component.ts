@@ -54,6 +54,7 @@ export class DestinationsPageComponent implements OnInit {
   public checked: boolean[] = [];
 
   public initChecked(): void {
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.criteria.length; i++) {
       this.checked.push(false);
     }
@@ -98,11 +99,11 @@ export class DestinationsPageComponent implements OnInit {
         this.criteria.push(destination.country);
       }
     }
-
-
+    this.criteria.push(-2);
     for (let i = 1; i <= 5; ++i) {
       this.criteria.push(i);
     }
+    this.criteria.push(-3);
     for (let i = 1000; i <= 10000; i += 1000) {
       this.criteria.push(i);
     }
@@ -114,6 +115,9 @@ export class DestinationsPageComponent implements OnInit {
     this.initChecked();
   }
 
-  public isNumber(val: any): boolean { return typeof val === 'number'; }
+  public isNumber(val: any): boolean {
+    return typeof val === 'number';
+  }
+
 
 }

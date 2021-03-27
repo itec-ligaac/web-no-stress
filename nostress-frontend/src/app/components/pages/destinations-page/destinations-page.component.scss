@@ -25,11 +25,6 @@
 }
 
 
-.criteria-title{
-  font-size:20px;
-  display:table;
-}
-
 .criteria-container {
   margin-left: auto;
   margin-right: auto;
@@ -107,4 +102,22 @@
 
 .column {
   flex: 50%;
+}
+
+
+.criteria-title{
+  font-size:20px;
+  display:table;
+  position:absolute;
+  margin-top:-35px;
+  background:#2f2f2f;
+  color:white;
+  padding:3px;
+}
+.criteria{
+  padding:10px;
+}
+
+.stars-criteria-title, .prices-criteria-title{
+  margin-left:19px;
 }
