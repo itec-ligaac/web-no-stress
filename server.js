@@ -6,7 +6,7 @@ const database = require('mime-db');
 const fs = require('fs');
 const Country = require('./models/country');
 const { response } = require('express');
-let destinations = require('./destinations.json');
+let destinations = require('./final.json');
 require('dotenv/config');
 
 const app = express();
