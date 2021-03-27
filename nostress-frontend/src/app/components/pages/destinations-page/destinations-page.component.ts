@@ -17,7 +17,8 @@ export class DestinationsPageComponent implements OnInit {
         {name: 'Hotel1', price: 10000, stars: 5},
         {name: 'Hotel2', price: 15000, stars: 3},
         {name: 'Hotel3', price: 8000, stars: 4}
-      ]
+      ],
+      picture: 'assets/images/pisa.png'
     },
     {
       name: 'Sk1',
@@ -26,7 +27,8 @@ export class DestinationsPageComponent implements OnInit {
         {name: 'Primul1', price: 5000, stars: 5},
         {name: 'Primul2', price: 3000, stars: 2},
         {name: 'Primul3', price: 3000, stars: 4}
-      ]
+      ],
+      picture: 'assets/images/pisa.png'
     },
     {
       name: 'Sk2',
@@ -35,7 +37,8 @@ export class DestinationsPageComponent implements OnInit {
         {name: 'Aldoilea1', price: 4500, stars: 5},
         {name: 'Aldoilea2', price: 2500, stars: 3},
         {name: 'Aldoilea3', price: 3500, stars: 4}
-      ]
+      ],
+      picture: 'assets/images/pisa.png'
     }
   ];
 

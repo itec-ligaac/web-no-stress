@@ -10,8 +10,15 @@
   </div>
   <div *ngFor="let destination of destinations">
     <div class="destination-container">
-      {{destination.name}}
-      {{destination.country}}
+      <img class="destination-picture" src="{{ destination.picture }}"/>
+      <p class="destination-text">Visit {{destination.name}} in the beautiful country of {{destination.country}}</p>
+      <br>
+      <div class="hotel-container">
+        <div *ngFor="let hotel of destination.hotels">
+          <a href = "{{hotel.website}}" target="_blank">{{hotel.name}}</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
