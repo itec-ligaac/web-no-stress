@@ -1,6 +1,6 @@
 import {Component, OnInit, Pipe} from '@angular/core';
 import {DestinationModel} from '../../../models/destination-model';
-import {of} from 'rxjs';
+import {DestinationsService} from '../../../services/destinations.service';
 
 @Component({
   selector: 'app-destinations-page',
@@ -9,58 +9,26 @@ import {of} from 'rxjs';
 })
 export class DestinationsPageComponent implements OnInit {
 
-  constructor() {
+  constructor(private destinationsService: DestinationsService) {
   }
 
   public criteria: any[] = [];
   initialDestinations: DestinationModel[] = [];
 
-  destinations: DestinationModel[] = [
-    {
-      name: 'Dubai',
-      country: 'Saudi Arabia',
-      danger: 50,
-      hotels: [
-        {name: 'Hotel1', price: 10000, stars: 5},
-        {name: 'Hotel2', price: 15000, stars: 3},
-        {name: 'Hotel3', price: 8000, stars: 4}
-      ],
-      picture: 'assets/images/pisa.png'
-    },
-    {
-      name: 'Sk1',
-      country: 'Austria',
-      danger: 10,
-      hotels: [
-        {name: 'Primul1', price: 5000, stars: 5},
-        {name: 'Primul2', price: 3000, stars: 2},
-        {name: 'Primul3', price: 3000, stars: 4}
-      ],
-      picture: 'assets/images/pisa.png'
-    },
-    {
-      name: 'Sk2',
-      country: 'Austria',
-      danger: 90,
-      hotels: [
-        {name: 'Aldoilea1', price: 4500, stars: 5},
-        {name: 'Aldoilea2', price: 2500, stars: 3},
-        {name: 'Aldoilea3', price: 3500, stars: 4}
-      ],
-      picture: 'assets/images/pisa.png'
-    }
-  ];
+  destinations: DestinationModel[] = [];
 
   public checked: boolean[] = [];
 
   public initChecked(): void {
-    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.criteria.length; i++) {
       this.checked.push(false);
     }
   }
 
   ngOnInit(): void {
+    this.destinationsService.getJSON().subscribe(data => {
+      this.destinations = data;
+    });
     this.initialDestinations = this.destinations;
     this.setCriteria();
     this.initChecked();

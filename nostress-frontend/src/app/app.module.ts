@@ -10,6 +10,7 @@ import { LandingPageComponent } from './components/pages/landing-page/landing-pa
 import { DestinationsPageComponent } from './components/pages/destinations-page/destinations-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privac
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
