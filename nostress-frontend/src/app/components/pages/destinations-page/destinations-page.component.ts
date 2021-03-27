@@ -9,15 +9,14 @@ import {DestinationsService} from '../../../services/destinations.service';
 })
 export class DestinationsPageComponent implements OnInit {
 
-  constructor(private destinationsService: DestinationsService) {
-  }
-
   public criteria: any[] = [];
   initialDestinations: DestinationModel[] = [];
-
   destinations: DestinationModel[] = [];
 
   public checked: boolean[] = [];
+
+  constructor(private destinationsService: DestinationsService) {
+  }
 
   public initChecked(): void {
     for (let i = 0; i < this.criteria.length; i++) {
@@ -25,17 +24,14 @@ export class DestinationsPageComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.destinationsService.getJSON().subscribe(data => {
-      this.destinations = data;
-    });
+  public async ngOnInit() {
+    this.destinations = await this.destinationsService.getJSON()
     this.initialDestinations = this.destinations;
     this.setCriteria();
     this.initChecked();
   }
 
   public filterDestinations(criteria: any, index: number): void {
-
     const visibleDestinations: DestinationModel[] = [];
 
     for (const destination of this.destinations) {
@@ -62,6 +58,7 @@ export class DestinationsPageComponent implements OnInit {
 
 
   public setCriteria(): void {
+    console.log(this.destinations);
     for (const destination of this.destinations) {
       if (!this.criteria.includes(destination.country)) {
         this.criteria.push(destination.country);
