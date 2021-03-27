@@ -4,5 +4,5 @@ export interface DestinationModel {
   name: string;
   country: string;
   hotels: HotelModel[];
-  picture: string;
+  picture?: string;
 }
