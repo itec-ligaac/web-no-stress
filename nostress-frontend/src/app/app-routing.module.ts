@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LandingPageComponent} from './components/pages/landing-page/landing-page.component';
 import {DestinationsPageComponent} from './components/pages/destinations-page/destinations-page.component';
+import {PrivacyPolicyComponent} from './components/pages/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'destinations',
     component: DestinationsPageComponent
+  },
+  {
+    path: 'privacy',
+    component: PrivacyPolicyComponent
   },
   {
     path: '',
