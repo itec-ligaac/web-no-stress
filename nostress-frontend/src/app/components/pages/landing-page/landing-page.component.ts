@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {_destinations} from '../../../mock-destinations';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -8,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageComponent implements OnInit {
 
   constructor() { }
+  dest = _destinations;
+
 
   ngOnInit(): void {
+
   }
 
 }

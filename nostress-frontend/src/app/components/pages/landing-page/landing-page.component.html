@@ -1,1 +1,13 @@
-<p>wdwadw</p>
+
+
+<div class="hero"><span class="site-desc">We help you find the best and safest holiday destination! Check out the most
+wanted places below!</span></div>
+
+
+<div class="carousel-wrap">
+<div class="destinations-carousel">
+<div class="destination" *ngFor="let _destination of dest">
+  <span class="destination-name"><span>{{ _destination.name }} in {{ _destination.country }}</span></span>
+  <img class="destination-picture" src="{{ _destination.picture }}"/>
+</div>
+</div></div>
