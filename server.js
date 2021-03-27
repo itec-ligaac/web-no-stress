@@ -7,6 +7,8 @@ const fs = require('fs');
 const Country = require('./models/country');
 const { response } = require('express');
 let destinations = require('./final.json');
+const PORT = process.env.PORT || 5000;
+
 require('dotenv/config');
 
 const app = express();
@@ -19,11 +21,12 @@ const app = express();
 //     })
 //     .catch((err) => console.log(err));
 
-app.listen(3080);
 
 app.use(morgan('dev'));
 
 app.use(express.static(__dirname + "/nostress-frontend/dist/nostress-frontend"));
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 app.get('/api/destinations', (req, res) => {
     let responseJson = [{}];
