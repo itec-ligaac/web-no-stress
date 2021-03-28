@@ -1,0 +1,45 @@
+.destination-picture{
+  width:300px;
+  height:150px;
+}
+
+.carousel-wrap{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+.destinations-carousel>div{
+  display:inline-table;
+}
+.destination-picture{
+  box-shadow:0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.destination-name{
+  position:absolute;
+  color:white;
+  margin-top:66px;
+  background:rgb(0,0,0,0.7);
+  padding:5px;
+  box-shadow:0px 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 999;
+}
+
+.destination{
+  margin:3px;
+  transition-timing-function: cubic-bezier(1,0,0,1);
+  transition-duration:.3s;
+}
+
+.destination:hover>.destination-picture{
+  transform:skew(-1deg);
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding:50px;
+  background:#eee;
+  font-size:20px;
+}

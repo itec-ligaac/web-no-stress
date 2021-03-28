@@ -1,0 +1,30 @@
+<div class="container" style="margin-bottom: 170px">
+  <h1 class="heading">Browse all the destinations available!</h1>
+  <div class="container criteria-container">
+    <div class="criteria" *ngFor="let crt of criteria;let i=index">
+      <span class="criteria-title country-criteria-title" *ngIf="i==0">Filter by country</span>
+      <span class="criteria-title stars-criteria-title" *ngIf="crt===-2">Filter by stars</span>
+      <span class="criteria-title prices-criteria-title" *ngIf="crt===-3">Filter by prices</span>
+      <input *ngIf="crt!=-1 && crt!=-2 && crt!=-3" type = "checkbox" [(ngModel)]="checked[i]" (click)="filterDestinations(crt, i)">
+      <p *ngIf="crt!=-1 && crt!=-2 && crt!=-3"> {{ crt }}</p>
+    </div>
+  </div>
+  <button class="btn btn-dark" (click)="reset()">Reset filters</button>
+  <div *ngFor="let destination of destinations">
+    <div class="destination-container">
+      <img class="destination-picture" src="{{ destination.picture }}"/>
+      <div class="danger"><div class="danger-in" [style.height]="destination.danger+'%'"></div></div>
+      <div class="destination-left-info">
+        <span class="danger-text">{{ destination.danger }}% danger level</span>
+        <p class="destination-text">Visit {{destination.name}} in the beautiful country of {{destination.country}}</p>
+        <div class="hotel-container">
+          <div *ngFor="let hotel of destination.hotels">
+            <a href = "{{hotel.website}}" target="_blank">{{hotel.name}}</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

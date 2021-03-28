@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Kabul",
+    "country":"Afghanistan",
+    "hotels":[
+      {
+        "name": "Exalted Mansion Hotel & Sp",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Light Lodge Hotel & Sp",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Northern Flower Hotel & Sp",
+        "stars": 3,
+        "price": 10000
+      }
+    ],
+    "danger": 50
+  },
+  {
+    "name": "Tirana",
+    "country":"Albania7",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana1",
+    "country":"Albania6",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana2",
+    "country":"Albania5",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana3",
+    "country":"Albania4",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana4",
+    "country":"Albania3",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana5",
+    "country":"Albania2",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana6",
+    "country":"Albania1",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },
+  {
+    "name": "Tirana7",
+    "country":"Albania5",
+    "hotels":[
+      {
+        "name": "Sunny Ridge Hote",
+        "stars": 5,
+        "price": 3000
+      },
+      {
+        "name": "Pleasant Maple Resor",
+        "stars": 4,
+        "price": 4000
+      },
+      {
+        "name": "Secluded Summit Hotel & Sp",
+        "stars": 2,
+        "price": 5000
+      }
+    ],
+    "danger": 40
+  },{
+  "name": "Tirana7",
+  "country":"Albania55",
+  "hotels":[
+    {
+      "name": "Sunny Ridge Hote",
+      "stars": 5,
+      "price": 3000
+    },
+    {
+      "name": "Pleasant Maple Resor",
+      "stars": 4,
+      "price": 4000
+    },
+    {
+      "name": "Secluded Summit Hotel & Sp",
+      "stars": 2,
+      "price": 5000
+    }
+  ],
+  "danger": 40
+},{
+  "name": "Tirana7",
+  "country":"Albaniagg5",
+  "hotels":[
+    {
+      "name": "Sunny Ridge Hote",
+      "stars": 5,
+      "price": 3000
+    },
+    {
+      "name": "Pleasant Maple Resor",
+      "stars": 4,
+      "price": 4000
+    },
+    {
+      "name": "Secluded Summit Hotel & Sp",
+      "stars": 2,
+      "price": 5000
+    }
+  ],
+  "danger": 40
+},{
+  "name": "Tirana7",
+  "country":"Albania15",
+  "hotels":[
+    {
+      "name": "Sunny Ridge Hote",
+      "stars": 5,
+      "price": 3000
+    },
+    {
+      "name": "Pleasant Maple Resor",
+      "stars": 4,
+      "price": 4000
+    },
+    {
+      "name": "Secluded Summit Hotel & Sp",
+      "stars": 2,
+      "price": 5000
+    }
+  ],
+  "danger": 40
+}
+]
